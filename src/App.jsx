@@ -23,11 +23,13 @@ export default function App() {
   // let id = id.length === 0 ? 1 : stacks.id + 1;
 
   return (
-    <div className="h-screen flex justify-evenly items-center font-brandon">
-      <div className="flex items-center justify-center space-x-12 flex-col space-y-2">
-        <p className="font-bold text-[40px]">STACK</p>
-        <p className="text-3xl">Data structure in Javascript</p>
-        <div className="w-[300px] justify-center flex items-center flex-col text-sm space-y-3 bg-green-300 shadow shadow-black p-5 rounded-lg text-[#303030]">
+    <div className="h-screen justify-evenly items-center font-brandon md:flex">
+      <div className="flex items-center justify-center space-x-12 flex-col space-y-2 my-20">
+        <div className="flex flex-col justify-center items-center">
+          <p className="font-bold text-[40px]">STACK</p>
+          <p className="text-3xl">Data structure in Javascript</p>
+        </div>
+        <div className="w-[300px] flex flex-col text-sm space-y-3 bg-green-300 shadow shadow-black p-5 rounded-lg text-[#303030]">
           <p>
             {" "}
             <span className="text-2xl font-medium">Push: </span>Adding an
@@ -49,9 +51,9 @@ export default function App() {
         </div>
       </div>
       <div className="text-center">
-        <div className="flex flex-col-reverse min-h-[500px] min-w-[300px] bg-amber-300 rounded-2xl py-5">
+        <div className=" max-md:mx-32 flex flex-col-reverse min-h-[500px] min-w-[300px] bg-amber-300 rounded-2xl py-5">
           {stackList.map((stack, index) => (
-            <ul className="rounded-lg justify-center items-center flex">
+            <ul className="rounded-lg justify-center items-center flex ">
               <li
                 className="m-2 h-14 w-14 bg-white rounded-xl justify-center flex items-center text-3xl font-bold text-amber-300"
                 key={index}
@@ -62,7 +64,7 @@ export default function App() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col space-y-7">
+      <div className="space-x-4 max-md:my-7  max-md:items-center max-md:justify-center max-md:flex">
         <button
           onClick={() => handleAdd()}
           className=" bg-amber-400 hover:scale-110 transition text-white rounded-2xl p-4"
